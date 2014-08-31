@@ -3,7 +3,7 @@
 ### とりあえず必要なもの
 ```
 $ sudo apt-get update
-$ sudo apt-get -y install build-essential libssl-dev zsh git curl
+$ sudo apt-get -y install build-essential libssl-dev libsqlite3-dev zsh git curl
 ```
 
 ### zsh
@@ -63,4 +63,7 @@ eval "$(rbenv init -)"
 $ cd /home/vagrant
 $ gem install bundler padrino
 $ padrino g project -d activerecord -e slim soccer_rss_app
+$ cd soccer_rss_app
+$ bundle install
+$ rbenv rehash
 ```
