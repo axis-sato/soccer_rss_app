@@ -15,6 +15,16 @@ Enter the new value, or press ENTER for the default
         Login Shell [/bin/bash]: /bin/zsh
 ```
 
+### Zsh + Prezto
+```
+$ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+# zshの設定ファイルがすでにある場合はどっかに退避しておく
+$ setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+
 ### Ruby
 ```
 # rbenv
@@ -30,32 +40,23 @@ gem: --no-rdoc --no-ri
 ```
 
 ```
+.zshrc
+
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+```
+
+```
 $ source ~/.zshrc
 $ rbenv install 2.1.2
 $ rbenv rehash
 $ rbenv global 2.1.2
 ```
 
-### Zsh + Prezto
-```
-$ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-# zshの設定ファイルがすでにある場合はどっかに退避しておく
-$ setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-```
 
 ※参照
 http://dev.classmethod.jp/tool/zsh-prezto/
 
-`.zshrc`にrbenvの設定を追記。
-```
-.zshrc
-
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-```
 
 
 ### Padrinoプロジェクト作成
