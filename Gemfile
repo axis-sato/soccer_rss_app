@@ -14,6 +14,9 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'rack-coffee', :require => 'rack/coffee'
+gem 'coffee-script'
+gem 'therubyracer'
 gem 'slim'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'sqlite3'
