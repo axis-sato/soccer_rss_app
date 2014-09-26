@@ -1,5 +1,6 @@
 module SoccerRssApp
   class App < Padrino::Application
+    register CoffeeInitializer
     use ActiveRecord::ConnectionAdapters::ConnectionManagement
     register Padrino::Mailer
     register Padrino::Helpers

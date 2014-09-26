@@ -14,6 +14,7 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
+gem 'rack-coffee', :require => 'rack/coffee'
 gem 'slim'
 gem 'activerecord', '>= 3.1', :require => 'active_record'
 gem 'sqlite3'
@@ -22,6 +23,8 @@ gem 'sqlite3'
 
 # Padrino Stable Gem
 gem 'padrino', '0.12.3'
+gem 'therubyracer'
+gem 'coffee-script'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

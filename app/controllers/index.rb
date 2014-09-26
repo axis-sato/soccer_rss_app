@@ -4,6 +4,10 @@ SoccerRssApp::App.controllers :index do
     render 'index'
   end
 
+  get :coffee, :map => '/javascripts/hello.js'  do
+    coffee 'index/hello' 
+  end
+
   # get :sample, :map => '/sample/url', :provides => [:any, :js] do
   #   case content_type
   #     when :js then ...
