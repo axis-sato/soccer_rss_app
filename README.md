@@ -65,6 +65,7 @@ $ cd /home/vagrant
 $ gem install bundler padrino
 $ padrino g project -d activerecord -e slim soccer_rss_app
 $ cd soccer_rss_app
+$ padrino g plugin coffee  // coffeescriptプラグイン
 $ bundle install
 $ rbenv rehash
 ```
