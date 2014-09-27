@@ -69,3 +69,8 @@ $ padrino g plugin coffee  // coffeescriptプラグイン
 $ bundle install
 $ rbenv rehash
 ```
+
+## デザイン
+* Bootstrap
+* Bootswatch Flatly (http://bootswatch.com/)
+* Simple Slidebar (http://startbootstrap.com/template-overviews/simple-sidebar/)
